@@ -1,12 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class GameSession : MonoBehaviour
 {
     int score = 0;
+    string playerName = "";
 
     private void Awake()
     {
@@ -30,6 +33,15 @@ public class GameSession : MonoBehaviour
     public int GetScore()
     {
         return score;
+    }
+    public string GetPlayerName()
+    {
+        return playerName;
+    }
+    public void ReadPlayerName()
+    {
+        playerName = FindObjectOfType<TMP_InputField>().text;
+        Debug.Log(playerName);
     }
     public void AddToScore(int scoreValue)
     {

@@ -13,7 +13,6 @@ public class HealthDisplay : MonoBehaviour
     {
         healthText = GetComponent<Text>();
         player = FindObjectOfType<Player>();
-
     }
 
     // Update is called once per frame
