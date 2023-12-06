@@ -43,7 +43,7 @@ public class Level : MonoBehaviour
   {
     WriteNameScreen = GameObject.Find("WriteNameScreen");
     Options = GameObject.Find("Options");
-    if (WriteNameScreen != null)
+    if (WriteNameScreen != null && Options != null)
     {
       WriteNameScreen.SetActive(false);
     }

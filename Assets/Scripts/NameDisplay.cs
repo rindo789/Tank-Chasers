@@ -4,21 +4,20 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreDisplay : MonoBehaviour
+public class NameDisplay : MonoBehaviour
 {
-    TMP_Text scoreText;
+    TMP_Text nameText;
     GameSession gameSession;
 
     // Start is called before the first frame update
     void Start()
     {
-        scoreText = GetComponent<TMP_Text>();
-        gameSession = FindObjectOfType<GameSession>();
+        nameText = GetComponent<TMP_Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = gameSession.GetScore().ToString();
+        nameText.text = GameData.PlayerName;
     }
 }

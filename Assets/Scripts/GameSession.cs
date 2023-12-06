@@ -9,7 +9,6 @@ using UnityEngine.UI;
 public class GameSession : MonoBehaviour
 {
     int score = 0;
-    string playerName = "";
 
     private void Awake()
     {
@@ -34,14 +33,10 @@ public class GameSession : MonoBehaviour
     {
         return score;
     }
-    public string GetPlayerName()
-    {
-        return playerName;
-    }
     public void ReadPlayerName()
     {
-        playerName = FindObjectOfType<TMP_InputField>().text;
-        Debug.Log(playerName);
+        GameData.PlayerName = FindObjectOfType<TMP_InputField>().text;
+        Debug.Log(GameData.PlayerName);
     }
     public void AddToScore(int scoreValue)
     {
@@ -62,6 +57,5 @@ public class GameSession : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }
