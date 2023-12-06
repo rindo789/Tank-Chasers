@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class NameDisplay : MonoBehaviour
 {
     TMP_Text nameText;
-    GameSession gameSession;
 
     // Start is called before the first frame update
     void Start()

@@ -14,6 +14,7 @@ public class ScoreDisplay : MonoBehaviour
     {
         scoreText = GetComponent<TMP_Text>();
         gameSession = FindObjectOfType<GameSession>();
+        gameSession.SetScore(GameData.PlayerScore);
     }
 
     // Update is called once per frame

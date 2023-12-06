@@ -12,6 +12,7 @@ public class HealthDisplay : MonoBehaviour
     void Start()
     {
         healthText = GetComponent<Text>();
+        healthText.text = GameData.PlayerHealth.ToString();
         player = FindObjectOfType<Player>();
     }
 

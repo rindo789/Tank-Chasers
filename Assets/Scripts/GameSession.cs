@@ -33,6 +33,10 @@ public class GameSession : MonoBehaviour
     {
         return score;
     }
+    public void SetScore(int newScore)
+    {
+        score = newScore;
+    }
     public void ReadPlayerName()
     {
         GameData.PlayerName = FindObjectOfType<TMP_InputField>().text;

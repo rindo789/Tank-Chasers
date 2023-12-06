@@ -20,12 +20,6 @@ public class ScoreLoader : MonoBehaviour
     SavePlayerScore(loadedScores);
   }
 
-  // Update is called once per frame
-  void Update()
-  {
-
-  }
-
   public List<ScoreEntry> LoadLeaderboardData()
   {
     string path = Application.persistentDataPath + "/leaderboard.save";
@@ -80,7 +74,6 @@ public class ScoreLoader : MonoBehaviour
 
   public void SavePlayerScore(List<ScoreEntry> loadedScores)
   {
-
     BinaryFormatter formatter = new BinaryFormatter();
     string path = Application.persistentDataPath + "/leaderboard.save";
     FileStream stream = new FileStream(path, FileMode.Create);
@@ -88,6 +81,4 @@ public class ScoreLoader : MonoBehaviour
     formatter.Serialize(stream, loadedScores);
     stream.Close();
   }
-
-
 }
