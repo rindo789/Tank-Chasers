@@ -10,6 +10,9 @@ public class Level : MonoBehaviour
 
   public void LoadStartMenu()
   {
+    GameData.alreadyLoaded = false;
+    GameData.isLoaded = false;
+    GameData.PlayerScore = 0;
     SceneManager.LoadScene(0);
   }
 

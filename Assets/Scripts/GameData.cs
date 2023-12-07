@@ -7,4 +7,6 @@ public static class GameData
   public static int PlayerScore { get; set; }
   public static int PlayerHealth { get; set; }
   public static bool isLoaded { get; set; } = false;
+  public static bool alreadyLoaded { get; set; } = false;
+
 }

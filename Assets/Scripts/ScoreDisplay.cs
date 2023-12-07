@@ -14,7 +14,12 @@ public class ScoreDisplay : MonoBehaviour
     {
         scoreText = GetComponent<TMP_Text>();
         gameSession = FindObjectOfType<GameSession>();
-        gameSession.SetScore(GameData.PlayerScore);
+        if (GameData.isLoaded) {
+          if (!GameData.alreadyLoaded) {
+            gameSession.SetScore(GameData.PlayerScore);
+            GameData.alreadyLoaded = true;
+          }
+        }
     }
 
     // Update is called once per frame
